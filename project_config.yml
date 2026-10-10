@@ -1,0 +1,47 @@
+# Project configuration for the LLMOps course, filled in for you at onboarding.
+# Every value below was provisioned for you in the course workspace; you configure nothing.
+
+# Your usage policy: set it on every serverless job, endpoint and app you create.
+usage_policy_id: "29a355d8-7fa4-3f65-b328-9f900842672e"
+
+# Development: your own schema in the dev catalog, which you manage and work in.
+dev:
+  catalog: "llmops_dev"
+  schema: "maria"
+  volume: "arxiv_files"
+  llm_endpoint: "course_ops.gateway.chat"
+  embedding_endpoint: "databricks-gte-large-en"
+  vector_search_endpoint: "vs-llmops"
+  warehouse_id: "d547d0442d754e84"
+  experiment_path: "/llmops/maria"
+  # The cohort's Lakebase instance of dev and your own database on it, for pgvector and memory.
+  lakebase_instance: "lb-llmops-dev"
+  lakebase_database: "maria"
+
+# Acceptance: your schema in the acceptance catalog, written by your deploys; you read it.
+acc:
+  catalog: "llmops_acc"
+  schema: "maria"
+  volume: "arxiv_files"
+  llm_endpoint: "course_ops.gateway.chat"
+  embedding_endpoint: "databricks-gte-large-en"
+  vector_search_endpoint: "vs-llmops"
+  warehouse_id: "d547d0442d754e84"
+  experiment_path: "/llmops/maria"
+  # The acceptance instance and your database on it, written by your deploys; you read it.
+  lakebase_instance: "lb-llmops-acc"
+  lakebase_database: "maria"
+
+# Production: your schema in the production catalog, written by your deploys; you read it.
+prd:
+  catalog: "llmops_prd"
+  schema: "maria"
+  volume: "arxiv_files"
+  llm_endpoint: "course_ops.gateway.chat"
+  embedding_endpoint: "databricks-gte-large-en"
+  vector_search_endpoint: "vs-llmops"
+  warehouse_id: "d547d0442d754e84"
+  experiment_path: "/llmops/maria"
+  # The production instance and your database on it, written by your deploys; you read it.
+  lakebase_instance: "lb-llmops-prd"
+  lakebase_database: "maria"
